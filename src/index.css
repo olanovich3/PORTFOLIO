@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Libre+Baskerville:wght@400;700&family=VT323&display=swap');
+
+
+
+*{
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Indie Flower', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+
+}
+
+
+main{
+  background-color: #f9f4f4;
+  background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
