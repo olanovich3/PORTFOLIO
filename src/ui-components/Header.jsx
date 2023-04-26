@@ -1,14 +1,14 @@
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import CheckBox from "./CheckBox";
 
 const HeaderStyled = styled.header`
-  background-color: #f9f4f4;
   width: 100vw;
   display: flex;
   justify-content: space-around;
-  & a {
-    color: black;
-  }
+  font-size: 24px;
+
   & .headerimg {
     display: flex;
     align-items: center;
@@ -16,25 +16,72 @@ const HeaderStyled = styled.header`
     gap: 2rem;
     width: 50%;
   }
+  & .headerimg > h1 {
+    display: block;
+  }
+
   & .headerimg > img {
     width: 85px;
     height: 100px;
   }
+
   & .headerList {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2.5rem;
     width: 50%;
-    gap: 2rem;
+    margin-right: 1rem;
+  }
+  & .headerList > li {
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   & .link {
-    height: 25px;
-    width: 25px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+  }
+  & .navlink {
+    display: block;
+  }
+  @media screen and (max-width: 1076px) {
+    & .headerimg h1 {
+      display: none;
+    }
+    & .headerimg {
+      width: 20%;
+    }
+    @media screen and (max-width: 782px) {
+      & .navlink {
+        display: none;
+      }
+    }
+    & .headerList {
+      gap: 1.5rem;
+      margin-right: 2rem;
+    }
   }
 `;
-
 const Header = () => {
+  const [theme, setTheme] = useState(true);
+  const toggleTheme = () => {
+    setTheme(!theme);
+  };
+  useEffect(() => {
+    const body = document.querySelector("body");
+    if (theme) {
+      body.classList.remove("dark");
+      body.classList.add("light");
+    } else {
+      body.classList.remove("light");
+      body.classList.add("dark");
+    }
+  }, [theme]);
+
   return (
     <HeaderStyled>
       <nav className="headerimg">
@@ -45,12 +92,17 @@ const Header = () => {
         />
         <h1>CARLOS OLANO GONZALEZ</h1>
       </nav>
+
       <ul className="headerList">
         <li>
-          <NavLink to={"/"}>ABOUT</NavLink>
+          <NavLink className="navlink" to={"/"}>
+            ABOUT
+          </NavLink>
         </li>
         <li>
-          <NavLink to={"/projects"}>PROJECTS</NavLink>
+          <NavLink className="navlink" to={"/projects"}>
+            PROJECTS
+          </NavLink>
         </li>
         <li>
           <a href="https://github.com/olanovich3?tab=repositories">
@@ -71,7 +123,7 @@ const Header = () => {
           </a>
         </li>
         <li>
-          <button>night</button>
+          <CheckBox action={() => toggleTheme()} />
         </li>
       </ul>
     </HeaderStyled>

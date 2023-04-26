@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const HomeStyled = styled.main`
   padding: 2rem;
+  overflow-y: auto;
   & .homeInformation {
     width: 100%;
     height: 100%;
@@ -11,6 +12,9 @@ const HomeStyled = styled.main`
     align-items: center;
     justify-content: center;
     gap: 2rem;
+  }
+  & .homeInformation > h2 {
+    font-size: 2.5rem;
   }
 
   & .homeText {
@@ -22,6 +26,11 @@ const HomeStyled = styled.main`
     border: none;
     border-radius: 5%;
   }
+  @media screen and (max-width: 782px) {
+    & .homeInformation > h2 {
+      font-size: 1.5rem;
+    }
+  }
 `;
 
 const Home = () => {
@@ -30,12 +39,12 @@ const Home = () => {
     <HomeStyled>
       <nav className="homeInformation">
         <h2>
-          <strong>HI, I´M CARLOS OLANO GONZALEZ</strong>
+          <strong>HI, I´M CARLOS OLANO</strong>
         </h2>
 
         <p className="homeText">
-          I´am a Full Stack Developer, specialized in JavaScript, ReactJS, HTML5
-          and CSS3, committed to keep expanding my skills and knowledge in this
+          I´am a Web Developer, specialized in JavaScript, ReactJS, HTML5 and
+          CSS3, committed to keep expanding my skills and knowledge in this
           area.
         </p>
         <p className="homeText">

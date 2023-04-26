@@ -11,9 +11,27 @@
   text-decoration: none;
 
 }
+a{
+  color: inherit;
+} 
 
 
 main{
-  background-color: #f9f4f4;
+  
   background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+  background-attachment: fixed;
+
+
+
 }
+.light{
+  background-color: #f9f4f4;
+  color: black;
+}
+
+.dark{
+  background-color: black;
+  color:white;
+}
+
+

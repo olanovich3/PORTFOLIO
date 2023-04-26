@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const GeneralLayoutStyled = styled.div`
   display: grid;
-  grid-template-rows: 20vh 80vh;
+  grid-template-rows: 17vh 83vh;
   height: 100vh;
 `;
 
