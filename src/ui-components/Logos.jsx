@@ -22,6 +22,16 @@ const LogosStyled = styled.ul`
   & .typescript > p {
     font-size: 1.2rem;
   }
+  @media screen and (max-width: 782px) {
+    li > img {
+      width: 45px;
+      height: 45px;
+    }
+    & .typescript > img {
+      width: 45px;
+      height: 45px;
+    }
+  }
 `;
 
 const Logos = () => {

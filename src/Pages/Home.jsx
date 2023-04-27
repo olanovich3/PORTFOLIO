@@ -47,6 +47,9 @@ const HomeStyled = styled.main`
     & .buttontext {
       font-size: 0.5rem;
     }
+    & .homeText {
+      font-size: 0.8rem;
+    }
   }
 `;
 //prueba
