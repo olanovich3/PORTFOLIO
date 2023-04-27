@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PokeApi from "../ui-components/PokeApi";
-import Ffvii from "../ui-components/FFVII";
 import Swapit from "../ui-components/Swapit";
+import FinalFantasy from "../ui-components/FinalFantasy";
 
 const ProjectsStyled = styled.main`
   padding: 2rem;
@@ -16,7 +16,7 @@ const Projects = () => {
   return (
     <ProjectsStyled>
       <PokeApi />
-      <Ffvii />
+      <FinalFantasy />
       <Swapit />
     </ProjectsStyled>
   );

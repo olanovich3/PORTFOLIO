@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FfviiStyled = styled.nav`
+const FinalFantasyStyled = styled.nav`
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -23,7 +23,6 @@ const FfviiStyled = styled.nav`
     display: flex;
     align-items: center;
     justify-content: start;
-
     gap: 2rem;
   }
 
@@ -33,9 +32,9 @@ const FfviiStyled = styled.nav`
   }
 `;
 
-const Ffvii = () => {
+const FinalFantasy = () => {
   return (
-    <FfviiStyled>
+    <FinalFantasyStyled>
       <h2>FINAL FANTASY VII PROJECT</h2>
       <p>
         Web application where you log in with username, email and password. Once
@@ -84,8 +83,8 @@ const Ffvii = () => {
           </a>
         </li>
       </ul>
-    </FfviiStyled>
+    </FinalFantasyStyled>
   );
 };
 
-export default Ffvii;
+export default FinalFantasy;
