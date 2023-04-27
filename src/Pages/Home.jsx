@@ -49,6 +49,7 @@ const HomeStyled = styled.main`
     }
   }
 `;
+//prueba
 
 const Home = () => {
   let navigate = useNavigate();
