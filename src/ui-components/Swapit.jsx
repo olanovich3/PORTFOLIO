@@ -5,9 +5,10 @@ const SwapitStyled = styled.nav`
   flex-direction: column;
   padding: 2rem;
   gap: 1rem;
-
-  width: 33%;
-  height: 80%;
+  width: 100%;
+  :hover {
+    scale: 1.05;
+  }
   & .logos {
     display: flex;
     gap: 1rem;
@@ -39,7 +40,8 @@ const Swapit = () => {
         Web application that aims to exchange goods at zero cost. In the
         application you can exchange messages with other users, save products as
         favourites, create ratings about other users and the complete CRUD
-        process.
+        process. Web connected to an API that has been designed from the ground
+        up.
       </p>
       <h2>Technologies:</h2>
       <ul className="logos">

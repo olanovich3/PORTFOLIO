@@ -5,9 +5,11 @@ const PokeApiStyled = styled.nav`
   flex-direction: column;
   padding: 2rem;
   gap: 1rem;
+  width: 100%;
+  :hover {
+    scale: 1.05;
+  }
 
-  width: 33%;
-  height: 80%;
   & .logos {
     display: flex;
     gap: 1rem;
@@ -41,6 +43,7 @@ const PokeApi = () => {
         (rock, paper, scissors) and a POKEAPI where you can search for a pokemon
         by name or feature.
       </p>
+
       <h2>Technologies:</h2>
       <ul className="logos">
         <li>
@@ -62,6 +65,7 @@ const PokeApi = () => {
           />
         </li>
       </ul>
+
       <ul className="videolink">
         <li>
           <h2>See more on...</h2>

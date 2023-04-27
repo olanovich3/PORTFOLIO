@@ -1,5 +1,6 @@
 import { Navigate, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import Logos from "../ui-components/Logos";
 
 const HomeStyled = styled.main`
   padding: 2rem;
@@ -18,6 +19,7 @@ const HomeStyled = styled.main`
   }
 
   & .homeText {
+    font-size: 1.2rem;
     width: 60%;
   }
   & .button {
@@ -28,7 +30,22 @@ const HomeStyled = styled.main`
   }
   @media screen and (max-width: 782px) {
     & .homeInformation > h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+    }
+    & .homeInformation {
+      position: fixed;
+      top: 80px; /* ajusta este valor según el tamaño de tu header */
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: auto;
+      gap: 16px;
+    }
+    & .button {
+      padding: 0.5rem 3rem;
+    }
+    & .buttontext {
+      font-size: 0.5rem;
     }
   }
 `;
@@ -42,21 +59,16 @@ const Home = () => {
           <strong>HI, I´M CARLOS OLANO</strong>
         </h2>
 
+        <p className="homeText">I´am a Web Developer and my skills are in:</p>
+        <Logos />
+
         <p className="homeText">
-          I´am a Web Developer, specialized in JavaScript, ReactJS, HTML5 and
-          CSS3, committed to keep expanding my skills and knowledge in this
-          area.
-        </p>
-        <p className="homeText">
-          In addition, I love spending time with my family and friends. I
-          believe that personal relationships are essential for a happy and
-          balanced life. I enjoy working in teams and collaborating on creative
-          and challenging projects. I am also passionate about sports, and I
-          believe that physical activity is an important part of a healthy
-          lifestyle.
+          About me... just to say that I love spending time with my family, my
+          friends, playing sports, being happy as much as possible during the
+          day and most of all "The Spanish aperitivo".
         </p>
         <button onClick={() => navigate("/projects")} className="button">
-          PROJECTS
+          <h2 className="buttontext">PROJECTS</h2>
         </button>
       </nav>
     </HomeStyled>

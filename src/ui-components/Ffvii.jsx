@@ -5,8 +5,11 @@ const FfviiStyled = styled.nav`
   flex-direction: column;
   padding: 2rem;
   gap: 1rem;
-  width: 33%;
-  height: 80%;
+  width: 100%;
+  :hover {
+    scale: 1.05;
+  }
+
   & .logos {
     display: flex;
     gap: 1rem;
@@ -37,7 +40,8 @@ const Ffvii = () => {
       <p>
         Web application where you log in with username, email and password. Once
         inside the application you can search all the enemies by name, level,
-        attack, defence, etc. of the game and the complete CRUD process.
+        attack, defence, etc. of the game and the complete CRUD process. Web
+        connected to an API modifiable from the CRUD.
       </p>
       <h2>Technologies:</h2>
       <ul className="logos">

@@ -7,8 +7,9 @@ const ProjectsStyled = styled.main`
   padding: 2rem;
   overflow-y: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
 `;
 
 const Projects = () => {

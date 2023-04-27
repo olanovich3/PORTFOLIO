@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import CheckBox from "./CheckBox";
 
@@ -20,7 +20,7 @@ const HeaderStyled = styled.header`
     display: block;
   }
 
-  & .headerimg > img {
+  & .homePicture {
     width: 85px;
     height: 100px;
   }
@@ -47,6 +47,10 @@ const HeaderStyled = styled.header`
   }
   & .navlink {
     display: block;
+    transition: all ease-in-out 0.4s;
+  }
+  .navlink.active {
+    font-weight: bold;
   }
   @media screen and (max-width: 1076px) {
     & .headerimg h1 {
@@ -81,26 +85,40 @@ const Header = () => {
       body.classList.add("dark");
     }
   }, [theme]);
+  const location = useLocation();
 
   return (
     <HeaderStyled>
       <nav className="headerimg">
-        <img
-          className="homePicture"
-          src="https://res.cloudinary.com/dysog0ybg/image/upload/v1682325087/ApplicationFrameHost_lco4Kfriqm_zpaqgx.png"
-          alt="portrait"
-        />
+        <NavLink to={"/"}>
+          <img
+            className="homePicture"
+            src="https://res.cloudinary.com/dysog0ybg/image/upload/v1682325087/ApplicationFrameHost_lco4Kfriqm_zpaqgx.png"
+            alt="portrait"
+          />
+        </NavLink>
+
         <h1>CARLOS OLANO GONZALEZ</h1>
       </nav>
 
       <ul className="headerList">
         <li>
-          <NavLink className="navlink" to={"/"}>
+          <NavLink
+            className={`navlink ${location.pathname === "/" && "active"}`}
+            exact
+            to={"/"}
+          >
             ABOUT
           </NavLink>
         </li>
         <li>
-          <NavLink className="navlink" to={"/projects"}>
+          <NavLink
+            className={`navlink ${
+              location.pathname === "/projects" && "active"
+            }`}
+            exact
+            to={"/projects"}
+          >
             PROJECTS
           </NavLink>
         </li>
