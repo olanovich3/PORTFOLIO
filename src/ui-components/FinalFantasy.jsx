@@ -6,12 +6,11 @@ const FinalFantasyStyled = styled.nav`
   padding: 2rem;
   gap: 1rem;
   width: 100%;
-  :hover {
-    scale: 1.05;
-  }
+  border: 2px solid #ccc;
 
   & .logos {
     display: flex;
+    padding: 0;
     gap: 1rem;
   }
   & .logos > li > img {
@@ -29,6 +28,9 @@ const FinalFantasyStyled = styled.nav`
   & .youtube {
     width: 50px;
     height: 50px;
+  }
+  & .link {
+    text-decoration: underline;
   }
 `;
 
@@ -69,20 +71,17 @@ const FinalFantasy = () => {
           />
         </li>
       </ul>
-      <ul className="videolink">
-        <li>
-          <h2>See more on...</h2>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=Op_Um61C__k&ab_channel=CarlosOlanoGonzalez">
-            <img
-              className="youtube"
-              src="https://res.cloudinary.com/dysog0ybg/image/upload/v1676301094/SocialMedia%20Icons/youtube_xh2nkm.png"
-              alt="youtubelogo"
-            />
-          </a>
-        </li>
-      </ul>
+      <div className="videolink">
+        <h2>Click</h2>
+
+        <a
+          className="link"
+          href="https://www.youtube.com/watch?v=Op_Um61C__k&ab_channel=CarlosOlanoGonzalez"
+        >
+          <h2>here</h2>
+        </a>
+        <h2>to see more</h2>
+      </div>
     </FinalFantasyStyled>
   );
 };

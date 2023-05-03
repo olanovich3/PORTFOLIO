@@ -10,6 +10,7 @@ const ProjectsStyled = styled.main`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: auto;
   gap: 1rem;
+  align-items: start;
 `;
 
 const Projects = () => {

@@ -6,12 +6,11 @@ const PokeApiStyled = styled.nav`
   padding: 2rem;
   gap: 1rem;
   width: 100%;
-  :hover {
-    scale: 1.05;
-  }
+  border: 2px solid #ccc;
 
   & .logos {
     display: flex;
+    padding: 0;
     gap: 1rem;
   }
   & .logos > li > img {
@@ -22,7 +21,6 @@ const PokeApiStyled = styled.nav`
   & .videolink {
     display: flex;
     align-items: center;
-    justify-content: start;
 
     gap: 2rem;
   }
@@ -30,6 +28,9 @@ const PokeApiStyled = styled.nav`
   & .youtube {
     width: 50px;
     height: 50px;
+  }
+  & .link {
+    text-decoration: underline;
   }
 `;
 
@@ -41,7 +42,7 @@ const PokeApi = () => {
         Web application where you can log in with your nickname and at any time
         you can change the background colour of your screen. There is a game
         (rock, paper, scissors) and a POKEAPI where you can search for a pokemon
-        by name or feature.
+        by name or feature and see the details of them.
       </p>
 
       <h2>Technologies:</h2>
@@ -66,20 +67,17 @@ const PokeApi = () => {
         </li>
       </ul>
 
-      <ul className="videolink">
-        <li>
-          <h2>See more on...</h2>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=th7O4N33cMg&t=3s&ab_channel=CarlosOlanoGonzalez">
-            <img
-              className="youtube"
-              src="https://res.cloudinary.com/dysog0ybg/image/upload/v1676301094/SocialMedia%20Icons/youtube_xh2nkm.png"
-              alt="youtubelogo"
-            />
-          </a>
-        </li>
-      </ul>
+      <div className="videolink">
+        <h2>Click</h2>
+        <a
+          className="link"
+          href="https://www.youtube.com/watch?v=th7O4N33cMg&t=3s&ab_channel=CarlosOlanoGonzalez"
+        >
+          <h2>here</h2>
+        </a>
+
+        <h2>to see more</h2>
+      </div>
     </PokeApiStyled>
   );
 };
