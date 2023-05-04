@@ -69,7 +69,7 @@ const Home = () => {
         <p className="homeText">
           About me... just to say that I love spending time with my family, my
           friends, playing sports and most of all being happy as much as
-          possible during the day".
+          possible during the day.
         </p>
         <button onClick={() => navigate("/projects")} className="button">
           <h2 className="buttontext">PROJECTS</h2>
