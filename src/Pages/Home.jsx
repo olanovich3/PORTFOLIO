@@ -27,6 +27,7 @@ const HomeStyled = styled.main`
     padding: 1rem 4rem;
     border: none;
     border-radius: 5%;
+    cursor: pointer;
   }
   @media screen and (max-width: 782px) {
     & .homeInformation > h2 {

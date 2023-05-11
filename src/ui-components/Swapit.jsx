@@ -40,7 +40,7 @@ const SwapitStyled = styled.nav`
 const Swapit = () => {
   return (
     <SwapitStyled>
-      <h2>SWAPIT PROJECT</h2>
+      <h1>SWAPIT PROJECT</h1>
       <p>
         Web application that aims to exchange goods at zero cost. In the
         application you can exchange messages with other users, save products as
@@ -92,11 +92,12 @@ const Swapit = () => {
 
         <a
           className="link"
+          target="_blank"
           href="https://www.youtube.com/watch?v=actUTj1WNSQ&ab_channel=CarlosOlanoGonzalez"
         >
           <h2>here</h2>
         </a>
-        <h2>to see more</h2>
+        <h2>to see a video</h2>
       </div>
     </SwapitStyled>
   );

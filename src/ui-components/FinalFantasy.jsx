@@ -76,11 +76,12 @@ const FinalFantasy = () => {
 
         <a
           className="link"
+          target="_blank"
           href="https://www.youtube.com/watch?v=Op_Um61C__k&ab_channel=CarlosOlanoGonzalez"
         >
           <h2>here</h2>
         </a>
-        <h2>to see more</h2>
+        <h2>to see a video</h2>
       </div>
     </FinalFantasyStyled>
   );

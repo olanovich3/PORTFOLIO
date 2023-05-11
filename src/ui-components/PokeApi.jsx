@@ -71,12 +71,13 @@ const PokeApi = () => {
         <h2>Click</h2>
         <a
           className="link"
+          target="_blank"
           href="https://www.youtube.com/watch?v=th7O4N33cMg&t=3s&ab_channel=CarlosOlanoGonzalez"
         >
           <h2>here</h2>
         </a>
 
-        <h2>to see more</h2>
+        <h2>to see a video</h2>
       </div>
     </PokeApiStyled>
   );
