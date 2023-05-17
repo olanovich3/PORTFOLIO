@@ -99,6 +99,13 @@ const Swapit = () => {
         </a>
         <h2>to see a video</h2>
       </div>
+      <div>
+        <a
+          target="_blank"
+          href="https://github.com/olanovich3/SWAPit_FrontEnd"
+        ></a>
+        <h2>Code</h2>
+      </div>
     </SwapitStyled>
   );
 };
