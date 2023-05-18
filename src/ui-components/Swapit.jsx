@@ -22,10 +22,8 @@ const SwapitStyled = styled.nav`
   }
   & .videolink {
     display: flex;
-    align-items: center;
-    justify-content: start;
-
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   & .youtube {
@@ -34,6 +32,9 @@ const SwapitStyled = styled.nav`
   }
   & .link {
     text-decoration: underline;
+  }
+  & .link > span {
+    font-size: 16px;
   }
 `;
 
@@ -87,24 +88,29 @@ const Swapit = () => {
           />
         </li>
       </ul>
+      <h2>Links:</h2>
       <div className="videolink">
-        <h2>Click</h2>
-
         <a
           className="link"
           target="_blank"
           href="https://www.youtube.com/watch?v=actUTj1WNSQ&ab_channel=CarlosOlanoGonzalez"
         >
-          <h2>here</h2>
+          <span>Video</span>
         </a>
-        <h2>to see a video</h2>
-      </div>
-      <div>
         <a
+          className="link"
           target="_blank"
           href="https://github.com/olanovich3/SWAPit_FrontEnd"
-        ></a>
-        <h2>Code</h2>
+        >
+          <span>Frontend repository</span>
+        </a>
+        <a
+          className="link"
+          target="_blank"
+          href="https://github.com/olanovich3/SWAPit_BackEnd"
+        >
+          <span>Backend repository</span>
+        </a>
       </div>
     </SwapitStyled>
   );

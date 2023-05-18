@@ -61,16 +61,16 @@ const Home = () => {
     <HomeStyled>
       <nav className="homeInformation">
         <h2>
-          <strong>HI, I´M CARLOS OLANO</strong>
+          <strong>HI, I´M CARLOS</strong>
         </h2>
 
         <p className="homeText">I´am a Web Developer and my skills are in:</p>
         <Logos />
 
         <p className="homeText">
-          About me... just to say that I love spending time with my family, my
-          friends, playing sports and most of all being happy as much as
-          possible during the day.
+          About me...I recently discovered my passion for creating through code,
+          and ever since, each day presents a fresh opportunity to learn and
+          explore.
         </p>
         <button onClick={() => navigate("/projects")} className="button">
           <h2 className="buttontext">PROJECTS</h2>

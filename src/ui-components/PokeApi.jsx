@@ -20,9 +20,9 @@ const PokeApiStyled = styled.nav`
   }
   & .videolink {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 
-    gap: 2rem;
+    gap: 1rem;
   }
 
   & .youtube {
@@ -31,6 +31,9 @@ const PokeApiStyled = styled.nav`
   }
   & .link {
     text-decoration: underline;
+  }
+  & .link > span {
+    font-size: 16px;
   }
 `;
 
@@ -66,18 +69,22 @@ const PokeApi = () => {
           />
         </li>
       </ul>
-
+      <h2>Links:</h2>
       <div className="videolink">
-        <h2>Click</h2>
         <a
           className="link"
           target="_blank"
           href="https://www.youtube.com/watch?v=th7O4N33cMg&t=3s&ab_channel=CarlosOlanoGonzalez"
         >
-          <h2>here</h2>
+          <span>Video</span>
         </a>
-
-        <h2>to see a video</h2>
+        <a
+          className="link"
+          target="_blank"
+          href="https://github.com/olanovich3/APPS_HUB"
+        >
+          <span>Repository</span>
+        </a>
       </div>
     </PokeApiStyled>
   );

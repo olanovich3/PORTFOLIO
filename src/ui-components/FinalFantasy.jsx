@@ -20,9 +20,8 @@ const FinalFantasyStyled = styled.nav`
   }
   & .videolink {
     display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   & .youtube {
@@ -31,6 +30,9 @@ const FinalFantasyStyled = styled.nav`
   }
   & .link {
     text-decoration: underline;
+  }
+  & .link > span {
+    font-size: 16px;
   }
 `;
 
@@ -71,17 +73,22 @@ const FinalFantasy = () => {
           />
         </li>
       </ul>
+      <h2>Links:</h2>
       <div className="videolink">
-        <h2>Click</h2>
-
         <a
           className="link"
           target="_blank"
           href="https://www.youtube.com/watch?v=Op_Um61C__k&ab_channel=CarlosOlanoGonzalez"
         >
-          <h2>here</h2>
+          <span>Video</span>
         </a>
-        <h2>to see a video</h2>
+        <a
+          className="link"
+          target="_blank"
+          href="https://github.com/olanovich3/FFVII_REACTJS_PROJECT"
+        >
+          <span>Repository</span>
+        </a>
       </div>
     </FinalFantasyStyled>
   );
