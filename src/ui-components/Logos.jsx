@@ -6,6 +6,9 @@ const LogosStyled = styled.ul`
   gap: 16px;
   flex-wrap: wrap;
   width: 60%;
+  li {
+    display: flex;
+  }
 
   li > img {
     width: 55px;
@@ -82,8 +85,8 @@ const Logos = () => {
           <strong>coming...</strong>
         </p>
         <img
-          src="https://res.cloudinary.com/dysog0ybg/image/upload/v1682587796/SocialMedia%20Icons/typescript_bv1ojg.png"
-          alt="typescriptlogo"
+          src="https://res.cloudinary.com/dysog0ybg/image/upload/v1687858616/SocialMedia%20Icons/java_wyjzow.png"
+          alt="javalogo"
         />
       </li>
     </LogosStyled>

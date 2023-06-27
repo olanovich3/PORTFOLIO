@@ -57,6 +57,7 @@ const HomeStyled = styled.main`
 
 const Home = () => {
   let navigate = useNavigate();
+
   return (
     <HomeStyled>
       <nav className="homeInformation">
@@ -74,6 +75,15 @@ const Home = () => {
         </p>
         <button onClick={() => navigate("/projects")} className="button">
           <h2 className="buttontext">PROJECTS</h2>
+        </button>
+        <button className="button">
+          <a
+            className="link"
+            target="_blank"
+            href="https://drive.google.com/file/d/1tZOJv7AO_jt8boWn2mRzSD2hqWevIztU/view?usp=drive_link"
+          >
+            <h2 className="buttontext">CV</h2>
+          </a>
         </button>
       </nav>
     </HomeStyled>
